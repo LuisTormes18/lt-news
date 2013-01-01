@@ -1,18 +1,4 @@
-import Title from "./../../components/ui/Title";
-
-import { categories } from "../../const/const";
-import NewsContainer from "../../components/news/NewsContainer";
-
-const Category = ({ news }) => {
-    return (
-        <div>
-            {/* <Title title={`LTNews | ${query.category}`} /> */}
-            <NewsContainer news={news} />
-        </div>
-    );
-};
-
-Category.getInitialProps = async (props) => {
+export default async function (req, res) {
     const key = process.env.NEXT_PUBLIC_API_KEY;
     let news = [];
 
@@ -34,13 +20,20 @@ Category.getInitialProps = async (props) => {
             };
         });
     } catch (err) {
-        console.log(err);
+        return res.json({ ok: false, err});
     }
 
-    return {
-        props: { news },
-        revalidate: 1,
-    };
-};
+    res.json({
+        ok: true,
+        news,
+    });
+}
 
-export default Category;
+// q=election
+// begin_date = 20210301
+// end_date = 20210331
+// 'http://api.nytimes.com
+//       /svc/search/v2/articlesearch.json?fl=headline&fq=web_url:%22'.
+//       $url.'%22&api-key='.$nytKey;
+// data.response.docs[0].multimedia = '';
+// console.log('noticias:', data.response.docs[0]);
