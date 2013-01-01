@@ -1,42 +1,32 @@
-import Title from "../../components/ui/Title";
+import { Head } from "next/head";
 import NewsContainer from "../../components/news/NewsContainer";
 
-export default function Search({ news }) {
+export default function Search({ news, search }) {
     return (
-        <div>
-            {/* <Title title={`You searched for ${router.query.q} | LTNews`} /> */}
-
+        <>
+            <Head>
+                <title>You searched for {search} | LTNews </title>
+                <meta name="description" content="web site of news" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <NewsContainer news={news} />
-        </div>
+        </>
     );
 }
 Search.getInitialProps = async (props) => {
-    const key = process.env.NEXT_PUBLIC_API_KEY;
     let news = [];
+    const result = await fetch(
+        `http://localhost:3000/api/news/search?${props.query.q}`
+    );
+    const data = await result.json();
 
-    try {
-        const res = await fetch(
-            `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${key}`
-        );
-        const data = await res.json();
-
-        news = data.response.docs.map((article) => {
-            return {
-                title: article.headline.main,
-                description: article.abstract,
-                url: article.web_url,
-                urlToImage: `https://www.nytimes.com/${article.multimedia[0]?.url}`,
-                source: article.source,
-                date: article.pub_date,
-                id: article._id,
-            };
-        });
-    } catch (err) {
-        console.log(err);
-    }
+    data.ok && (news = data.news);
 
     return {
-        props: { news },
+        props: {
+            news,
+            search: props.query.q,
+        },
         revalidate: 1,
     };
 };

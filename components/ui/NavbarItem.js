@@ -1,15 +1,11 @@
 import Link from 'next/link';
 
-const NavbarItem = ({to,text}) => {
-     const date = new Date();
-     const from = `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`;
-
+const NavbarItem = ({to, text}) => {
     return ( 
         <Link  href={{
-              pathname: "/[date]/[category]",
+              pathname: "/[category]",
               query: { date: from, category: to },
             }}>
-
         <a>{text}</a> 
         </Link>)
 }

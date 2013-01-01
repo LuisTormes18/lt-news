@@ -13,7 +13,7 @@ const Category = ({ news }) => {
 
 Category.getInitialProps = async (props) => {
     let news = [];
-    const result = await fetch(`http://localhost:3000/api/news_by_category?${props.query.category}`);
+    const result = await fetch(`http://localhost:3000/api/news/by_category?${props.query.category}`);
     const data = await result.json();
 
     data.ok && (news = data.news);
