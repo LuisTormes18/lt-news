@@ -12,6 +12,8 @@
 .header{
     position: fixed;
     width: 100%; 
+
+    background-color: white;
 }
 .header div{
     display: flex;

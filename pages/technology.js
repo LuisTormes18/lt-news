@@ -6,13 +6,13 @@ import Title from "./../components/ui/Title";
 import styles from "../styles/news.module.css";
 import useGetNews from "../hooks/useGetNews";
 
-export default function Home() {
+export default function Technology() {
 
-   const [news, loading, error] = useGetNews();
+   const [news, loading, error] = useGetNews('technology');
 
     return (
         <div>
-           <Title title='LTNews' />
+           <Title title='LTNews | Technology' />
 
             <Layout>
             {
