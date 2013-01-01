@@ -1,15 +1,12 @@
-import React from "react";
-import { useState, useContext } from "react";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
-import { context } from "./../../context/AppProvider";
 import NavbarCategories from './NavbarCategories';
-
 import styles from "../../styles/Layout.module.css";
 
 const Header = () => {
+    const router = useRouter();
     const [search, setSearch] = useState('');
-    const {category, setCategory} = useContext(context);    
-
     const handleInputChange = ({target}) => {
 
         setSearch(target.value);
@@ -19,7 +16,11 @@ const Header = () => {
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        setCategory(search);
+
+
+        router.push(`/search/${search}`);
+
+
         setSearch('');
     }
     return (
