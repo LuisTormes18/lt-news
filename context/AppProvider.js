@@ -7,7 +7,6 @@ export const AppProvider = ({ children }) => {
     const contextValues = {
         setCategory,
         category,
-
     };
 
     return (

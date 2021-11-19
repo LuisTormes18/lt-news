@@ -8,6 +8,8 @@ import CardNews from "./../components/news/CardNews";
 import styles from "../styles/news.module.css";
 import { context } from "./../context/AppProvider";
 
+import getNews from "./../helpers/getNews";
+
 export default function Home() {
 
     const {category, setCategory} = useContext(context);    
@@ -15,31 +17,14 @@ export default function Home() {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-
-        async function getNews() {
-            const date = '19-11-2021';
-            const api_key = "16e193285c7446b5b781eedad21c6d24";
-            const url = `https://newsapi.org/v2/everything?q=${category}&from=${date}&sortBy=popularity&apiKey=${api_key}`;
-            setLoading(true);
-            
-            try {
-
-                const resp = await fetch(url);
-                const data = await resp.json();
-
-                if (data.status === "ok") {
-                    setNews(data.articles);
-                } else {
-                    console.log(data.error);
-                }
-            } catch (error) {
-                console.log(error);
+        setLoading(true);
+         getNews({category}).then(resp=>{
+            if(!!resp){
+                setNews(resp);
             }
-
-        setLoading(false);
-            
-     }
-        getNews();
+            setLoading(false);
+         })
+        
     }, [category]);
 
     return (

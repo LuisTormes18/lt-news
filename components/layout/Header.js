@@ -1,8 +1,10 @@
 import React from "react";
-import styles from "../../styles/Layout.module.css";
 import { useState, useContext } from "react";
 
 import { context } from "./../../context/AppProvider";
+import NavbarCategories from './NavbarCategories';
+
+import styles from "../../styles/Layout.module.css";
 
 const Header = () => {
     const [search, setSearch] = useState('');
@@ -23,6 +25,7 @@ const Header = () => {
     return (
 
         <header className={styles.header}>
+            <div>
             <div className={styles.logo}>
                 <h1>LT<span>News</span></h1>
             </div>
@@ -30,6 +33,10 @@ const Header = () => {
                 <input type='text' value={search} onChange={handleInputChange} />
                 <button type='submit'>Q</button>
             </form>
+            </div>
+
+            <NavbarCategories />
+            
         </header>
     );
 };

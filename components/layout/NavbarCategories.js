@@ -1,23 +1,26 @@
-import styles from "../../styles/Layout.module.css";
 import Link from "next/link";
 import { useContext } from "react";
-import { context } from "./../context/AppProvider";
+
+import { context } from "../../context/AppProvider";
+import styles from "../../styles/Layout.module.css";
 
 const NavbarCategories = () => {
     const { setCategory } = useContext(context);
 
-    return (
+   return (
         <nav className={styles.navbar_categories}>
              <button
                 onClick={() => {
-                    setCategory("general");
+                    setCategory('general');
                 }}
             >
                 General
             </button>
              <button
                 onClick={() => {
-                    setCategory("business");
+                    setCategory('business');
+                   
+                   
                 }}
             >
                 Business
