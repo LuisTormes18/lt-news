@@ -8,34 +8,62 @@ const NavbarCategories = () => {
 
     return (
         <nav className={styles.navbar_categories}>
-            <Link href="/">
-                <a>General</a>
-            </Link>
-            <Link href="/">
-                <a>Business</a>
-            </Link>
+             <button
+                onClick={() => {
+                    setCategory("general");
+                }}
+            >
+                General
+            </button>
+             <button
+                onClick={() => {
+                    setCategory("business");
+                }}
+            >
+                Business
+            </button>
+
             <Link href="/">
                 <a>Entertainment</a>
             </Link>
-            <Link href="/">
-                <a>sports</a>
-            </Link>
-            <Link href="/filter/[c]" as={`/filter/science?from=19-11-2021`}>
-                <a>science</a>
-            </Link>
-            <Link href="/filter/[c]" as={`/filter/technology?from=19-11-2021`}>
-                <a>Technology</a>
-            </Link>
+             <button
+                onClick={() => {
+                    setCategory("entertainment");
+                }}
+            >
+                Entertainment
+            </button>
+             <button
+                onClick={() => {
+                    setCategory("sports");
+                }}
+            >
+                Sports
+            </button>
+            <button
+                onClick={() => {
+                    setCategory("science");
+                }}
+            >
+                Science
+            </button>
+            <button
+                onClick={() => {
+                    setCategory("technology");
+                }}
+            >
+                Technology
+            </button>
                 <button
                 onClick={() => {
-                    setCategory("Food");
+                    setCategory("food");
                 }}
             >
                 Food
             </button>
             <button
                 onClick={() => {
-                    setCategory("Health");
+                    setCategory("health");
                 }}
             >
                 Health
