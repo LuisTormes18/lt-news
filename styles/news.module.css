@@ -1,0 +1,25 @@
+.grid_cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 40px;
+
+}
+.card{
+    /* background-color: #f1f1f1; */
+    padding: 10px;
+}
+.card:hover{
+    cursor: pointer; 
+}
+.card img {
+    width: 100%;
+}
+
+.card:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: -2;
+    /* border-bottom: 1px solid black; */
+ 
+    cursor: default;
+ }

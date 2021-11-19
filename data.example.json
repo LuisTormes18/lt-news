@@ -1,0 +1,123 @@
+[
+    {
+        "status": "ok",
+        "totalResults": 12888,
+        "articles": [
+          {
+            "source": {
+              "id": null,
+              "name": "Lifehacker.com"
+            },
+            "author": "Brendan Hesse",
+            "title": "Should You Use NZXT's BLD Kit to Build Your First PC?",
+            "description": "The ability to build a PC is a valuable skill if you’re serious about gaming or interested in computer tech in general. Installing future upgrades, troubleshooting errors, and fine-tuning your machine to run games and apps is a lot easier when you know exactl…",
+            "url": "https://lifehacker.com/should-you-use-nzxts-bld-kit-to-build-your-first-pc-1848049637",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/804c04e604c32977f5d7e677adacd51a.png",
+            "publishedAt": "2021-11-16T18:30:00Z",
+            "content": "The ability to build a PC is a valuable skill if youre serious about gaming or interested in computer tech in general. Installing future upgrades, troubleshooting errors, and fine-tuning your machine… [+9745 chars]"
+          },
+          {
+            "source": {
+              "id": "engadget",
+              "name": "Engadget"
+            },
+            "author": "Mariella Moon",
+            "title": "1Password 8 is now officially available for Windows",
+            "description": "1Password's latest major update is now out of early access and is officially available for Windows 11. The version, called 1Password 8, features a brand new design and new productivity and security capabilities. Company chief experience officer Matt Davey sai…",
+            "url": "https://www.engadget.com/1-password-8-officially-available-windows-140021850.html",
+            "urlToImage": "https://s.yimg.com/os/creatr-uploaded-images/2021-11/1c9e47c0-46db-11ec-bffb-b7e54357990e",
+            "publishedAt": "2021-11-16T14:00:21Z",
+            "content": "1Password's latest major update is now out of early access and is officially available for Windows 11. The version, called 1Password 8, features a brand new design and new productivity and security c… [+1550 chars]"
+          },
+          {
+            "source": {
+              "id": "engadget",
+              "name": "Engadget"
+            },
+            "author": "Steve Dent",
+            "title": "Google unveils new features and tools to support local news",
+            "description": "Google has launched new tools and features for both readers and reporters designed to aid local news organizations, it announced today. The headline feature is a carousel that shows local news in response to search queries, launching around the world in all l…",
+            "url": "https://www.engadget.com/google-launches-new-features-to-support-local-news-organizations-152504647.html",
+            "urlToImage": "https://s.yimg.com/os/creatr-uploaded-images/2021-11/6b48a2e0-46da-11ec-bce5-f80a6ed0fd8d",
+            "publishedAt": "2021-11-16T15:25:04Z",
+            "content": "Google has launched new tools and features for both readers and reporters designed to aid local news organizations, it announced today. The headline feature is a carousel that shows local news in res… [+2078 chars]"
+          },
+          {
+            "source": {
+              "id": null,
+              "name": "Gizmodo.com"
+            },
+            "author": "Tom McKay",
+            "title": "Two Weeks Later, QAnon Supporters Are Still Awaiting JFK Jr.’s Return at the Grassy Knoll",
+            "description": "One might think that after waiting around Dallas, Texas for weeks expecting JFK Jr. (a man who is dead) to emerge and give a surprise speech restoring Donald Trump to the presidency, one would simply conclude that JFK Jr. is dead and he’s not going to do that…",
+            "url": "https://gizmodo.com/two-weeks-later-qanon-supporters-are-still-awaiting-jf-1848067480",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/a14d3418f1d8bfb63585631e35845a8a.jpg",
+            "publishedAt": "2021-11-16T18:47:00Z",
+            "content": "One might think that after waiting around Dallas, Texas for weeks expecting JFK Jr. (a man who is dead) to emerge and give a surprise speech restoring Donald Trump to the presidency, one would simply… [+4847 chars]"
+          },
+          {
+            "source": {
+              "id": null,
+              "name": "New York Times"
+            },
+            "author": "Eric Schmitt and Dave Philipps",
+            "title": "Pentagon Chief Expected to Discuss 2019 Airstrike That Killed Dozens",
+            "description": "A Times investigation found that the bombing in Syria was carried out by a shadowy Special Operations unit.",
+            "url": "https://www.nytimes.com/2021/11/17/us/politics/austin-pentagon-syria-airstrike.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/11/17/us/politics/17dc-airstrikes/17dc-airstrikes-facebookJumbo.jpg",
+            "publishedAt": "2021-11-17T16:54:46Z",
+            "content": "The Times investigation showed that the death toll from the strike, which killed an estimated 80 people, was almost immediately apparent to military officials. A legal officer flagged the bombing as … [+3552 chars]"
+          },
+          {
+            "source": {
+              "id": null,
+              "name": "New York Times"
+            },
+            "author": "Jennifer Steinhauer",
+            "title": "Oklahoma Governor and Pentagon Standoff Over Vaccines Intensifies",
+            "description": "The state says its National Guard members don’t need to get vaccinated. Pentagon officials say a failure to follow “valid medical readiness requirements” could “jeopardize” the status of troops.",
+            "url": "https://www.nytimes.com/2021/11/17/us/politics/oklahoma-vaccine-mandate.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/11/17/us/politics/17dc-vaccines-guard-1/merlin_173761809_61b6f4f9-871c-475c-a5a4-51fdbcc9d0d7-facebookJumbo.jpg",
+            "publishedAt": "2021-11-17T18:03:28Z",
+            "content": "The officials insist that Mr. Stitt has no legal standing to obviate the mandate, though experts on the obscure laws governing the Guard disagree. They note that unless federally deployed, National G… [+1571 chars]"
+          },
+          {
+            "source": {
+              "id": null,
+              "name": "New York Times"
+            },
+            "author": "Eric Schmitt",
+            "title": "Pentagon Chief Orders Briefing on 2019 Syria Airstrike That Killed Dozens",
+            "description": "A Times investigation found that dozens of women and children were killed in the bombing, which the military sought to conceal.",
+            "url": "https://www.nytimes.com/2021/11/15/us/politics/pentagon-syria-airstrike.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/11/15/us/politics/15dc-airstrike-1/merlin_184401348_da163a37-9765-4329-adc4-10e9d847016f-facebookJumbo.jpg",
+            "publishedAt": "2021-11-16T01:44:13Z",
+            "content": "Mr. Kirby said, though, that two studies examining civilian casualties commissioned by the Pentagon were wrapping up, and would soon be made public.\r\nOne study, by RAND Corporation and started during… [+2912 chars]"
+          },
+          {
+            "source": {
+              "id": null,
+              "name": "New York Times"
+            },
+            "author": "Benjamin Weiser",
+            "title": "Ghislaine Maxwell Trial: New Wrinkle as Judge May Be Promoted",
+            "description": "Senator Chuck Schumer will recommend Judge Alison J. Nathan for a seat on a federal appeals court, but the fraught case could put her in an unusual predicament.",
+            "url": "https://www.nytimes.com/2021/11/16/nyregion/ghislaine-maxwell-trial-epstein-judge.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/11/16/nyregion/16maxwelljudge01/16maxwelljudge01-facebookJumbo.jpg",
+            "publishedAt": "2021-11-16T23:24:26Z",
+            "content": "Mr. Schumer, in a statement on Tuesday, said Judge Nathans experience, legal brilliance, love of the rule of law and perspective would be invaluable in ensuring the federal judiciary fulfills its obl… [+1159 chars]"
+          },
+          {
+            "source": {
+              "id": null,
+              "name": "New York Times"
+            },
+            "author": "Benjamin Weiser",
+            "title": "New Wrinkle in Ghislaine Maxwell Trial as Judge May Be Promoted",
+            "description": "Senator Chuck Schumer will recommend Judge Alison J. Nathan for a seat on a federal appeals court, but the fraught case could put her in an unusual predicament.",
+            "url": "https://www.nytimes.com/2021/11/16/nyregion/ghislaine-maxwell-trial-judge.html",
+            "urlToImage": "https://static01.nyt.com/images/2021/11/16/nyregion/16maxwelljudge01/16maxwelljudge01-facebookJumbo.jpg",
+            "publishedAt": "2021-11-16T23:24:26Z",
+            "content": "Mr. Schumer, in a statement on Tuesday, said Judge Nathans experience, legal brilliance, love of the rule of law and perspective would be invaluable in ensuring the federal judiciary fulfills its obl… [+1159 chars]"
+          },
+]

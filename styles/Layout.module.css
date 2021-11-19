@@ -1,0 +1,59 @@
+.container {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    
+}
+.container main{
+    min-height: 100vh;
+    padding: 40px 10%;
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 5%;
+
+    /* position: fixed;
+    width: 100%; */
+}
+.logo h1 {
+    font-size: 30px;
+}
+.logo span {
+    color: #0070f3;
+    /* color: red; */
+}
+.search_bar input{
+    width: 250px;
+    /* border: none; */
+    /* border-bottom: 1px solid black; */
+}
+.search_bar input.focus{
+    border: none;
+}
+
+
+/* Navbar de categorias */
+.navbar_categories {
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: #2c2c2c;
+
+}
+.navbar_categories a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+.navbar_categories a:hover{
+    color: #0070f3;
+    /* color: aliceblue; */
+}
