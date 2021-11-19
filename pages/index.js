@@ -9,41 +9,35 @@ import styles from "../styles/news.module.css";
 import { context } from "./../context/AppProvider";
 
 export default function Home() {
-    // const { query } = useRouter();
 
     const {category, setCategory} = useContext(context);    
+    const [loading, setLoading] = useState(false);    
     const [news, setNews] = useState([]);
 
-//     useEffect(() => {
-
-//     if (!query.c) {
-//         setCategory('general');
-//     }
-//     else{
-//         setCategory(query.c)
-//     }
-    
-// }, [])
-
     useEffect(() => {
+
         async function getNews() {
-            // const date = query.from;
             const date = '19-11-2021';
             const api_key = "16e193285c7446b5b781eedad21c6d24";
             const url = `https://newsapi.org/v2/everything?q=${category}&from=${date}&sortBy=popularity&apiKey=${api_key}`;
+            setLoading(true);
+            
             try {
+
                 const resp = await fetch(url);
                 const data = await resp.json();
 
                 if (data.status === "ok") {
                     setNews(data.articles);
-                    console.log(data.articles)
                 } else {
                     console.log(data.error);
                 }
             } catch (error) {
                 console.log(error);
             }
+
+        setLoading(false);
+            
      }
         getNews();
     }, [category]);
@@ -57,7 +51,11 @@ export default function Home() {
             </Head>
 
             <Layout>
-                <div className={styles.grid_cards}>
+            {
+                loading ? (<h3>Loading...</h3>) : 
+
+                (
+                    <div className={styles.grid_cards}>
                     {news.map(
                         (_new, i) =>
                             i < 10 && (
@@ -65,6 +63,9 @@ export default function Home() {
                             )
                     )}
                 </div>
+                ) 
+            }
+                
             </Layout>
         </div>
     );

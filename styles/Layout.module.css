@@ -53,8 +53,10 @@
 .navbar_categories button {
     color: #f1f1f1;
     background-color: transparent;
+
+    border: none;
+    cursor: pointer;
 }
-.navbar_categories a:hover{
+.navbar_categories button:hover{
     color: #0070f3;
-    /* color: aliceblue; */
 }

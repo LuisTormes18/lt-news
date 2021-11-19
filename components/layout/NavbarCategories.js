@@ -1,7 +1,7 @@
 import styles from "../../styles/Layout.module.css";
 import Link from "next/link";
 import { useContext } from "react";
-import { context } from "./../../context/AppProvider";
+import { context } from "./../context/AppProvider";
 
 const NavbarCategories = () => {
     const { setCategory } = useContext(context);
@@ -22,10 +22,6 @@ const NavbarCategories = () => {
             >
                 Business
             </button>
-
-            <Link href="/">
-                <a>Entertainment</a>
-            </Link>
              <button
                 onClick={() => {
                     setCategory("entertainment");
