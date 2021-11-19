@@ -9,25 +9,26 @@ import styles from "../styles/news.module.css";
 import { context } from "./../context/AppProvider";
 
 export default function Home() {
-    const { query } = useRouter();
+    // const { query } = useRouter();
 
-    const [category, setCategory] = useState();    
+    const {category, setCategory} = useContext(context);    
     const [news, setNews] = useState([]);
 
-useEffect(() => {
+//     useEffect(() => {
 
-    if (!query.c) {
-        setCategory('general');
-    }
-    else{
-        setCategory(query.c)
-    }
+//     if (!query.c) {
+//         setCategory('general');
+//     }
+//     else{
+//         setCategory(query.c)
+//     }
     
-}, [query.c])
+// }, [])
 
     useEffect(() => {
         async function getNews() {
-            const date = query.from;
+            // const date = query.from;
+            const date = '19-11-2021';
             const api_key = "16e193285c7446b5b781eedad21c6d24";
             const url = `https://newsapi.org/v2/everything?q=${category}&from=${date}&sortBy=popularity&apiKey=${api_key}`;
             try {
@@ -36,6 +37,7 @@ useEffect(() => {
 
                 if (data.status === "ok") {
                     setNews(data.articles);
+                    console.log(data.articles)
                 } else {
                     console.log(data.error);
                 }
