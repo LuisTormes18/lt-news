@@ -10,12 +10,12 @@ import useGetNews from "../../hooks/useGetNews";
 export default function Sports() {
 
    const router = useRouter();
-   const [news, loading, error] = useGetNews(router.query.q);
+   const [news, loading, error] = useGetNews(null, router.query.q);
 
 
     return (
         <div>
-           <Title title='LTNews | Search...' />
+           <Title title={`You searched for ${router.query.q} | LTNews`} />
 
             <Layout>
             {
@@ -28,7 +28,7 @@ export default function Sports() {
 
                   <>
 
-<h2>Resultados que coninciden:</h2>
+<h2>The total number of results : {news.length + 1}</h2>
 
                     <div className={styles.grid_cards}>
                     {news.map(

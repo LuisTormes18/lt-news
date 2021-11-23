@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Layout.module.css";
 
+import NavbarCategories from './NavbarCategories';
+
 const Footer = () => {
     return (
         <footer className={styles.footer}>
@@ -10,10 +12,11 @@ const Footer = () => {
             </div>
                 
                 <span className={styles.licence}>
-                    Luis Tormes | &copy Todos los derechos reservados
+                     &copy Luis Tormes | Todos los derechos reservados
                 </span>
         </footer>
     );
 };
 
 export default Footer;
+                // <NavbarCategories theme='light' />

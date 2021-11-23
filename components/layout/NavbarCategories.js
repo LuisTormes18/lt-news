@@ -1,10 +1,15 @@
 import Link from "next/link";
 import styles from "../../styles/Layout.module.css";
 
-const NavbarCategories = () => {
+const NavbarCategories = ({theme='dark'}) => {
+
+  let classStyles;
+  theme === 'dark' 
+  ? classStyles = styles.navbar_categories_dark 
+  : classStyles = styles.navbar_categories_light
 
    return (
-        <nav className={styles.navbar_categories}>
+        <nav className={classStyles}>
             <Link href="/">
                 <a href="">Home</a>
            </Link> 
