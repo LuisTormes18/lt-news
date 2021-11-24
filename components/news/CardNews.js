@@ -4,14 +4,15 @@ import styles from "../../styles/news.module.css";
 const CardNews = ({ article }) => {
     return (
         <div className={styles.card}>
-            <h2> {article.title} </h2>
-            {/* <h2> {article.author} </h2> */}
-            {/* <p>{article.content}</p> */}
-            <img src={article.urlToImage} alt={article.title} />
+            <a href={article.url} target="_blank" className={styles.card_title}>{article.title} </a>
+            <a href={article.url} target="_blank">
+                <img src={article.urlToImage} alt='image' />
+            </a>
             <p>{article.description}</p>
-            <a href={article.url}>{article.url}</a>
 
         </div>
     );
 };
 export default CardNews;
+
+           

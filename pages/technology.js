@@ -22,7 +22,7 @@ export default function Technology() {
                     <div className={styles.grid_cards}>
                     {news.map(
                         (_new, i) =>
-                            i < 20 && (
+                            (
                                 <CardNews key={_new.title} article={_new} />
                             )
                     )}

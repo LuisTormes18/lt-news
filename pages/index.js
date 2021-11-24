@@ -20,11 +20,9 @@ export default function Home() {
 
                 (
                     <div className={styles.grid_cards}>
-                    {news.map(
+                    {news?.map(
                         (_new, i) =>
-                            i < 20 && (
                                 <CardNews key={_new.title} article={_new} />
-                            )
                     )}
                 </div>
                 ) 

@@ -34,12 +34,25 @@
     /*width: 250px;*/
      border: none; 
      border-bottom: 1px solid black; 
+     text-align: right;
+     padding-right: 20px;
 }
 .search_bar input:focus{
     border: none;
     outline: none;
     border-bottom: 1px solid black; 
 
+}
+.search_bar button{
+    cursor: pointer;
+    border: none;
+    background-image: url('./../public/q.png');
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
 }
 
 
@@ -71,15 +84,26 @@
 /*footer*/
 .footer{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    background-color: #f1f1f1;
+    flex-direction: column;
+    /*background-color: rgba(200,200,200,.09);*/
 
     height: 200px;
+    position: relative;
 }
 .licence{
     font-weight: bold;
 }
-/*.footer .licence{
-    color: #f1f1f1;
-}*/
+.footer hr{
+
+height: 2px;
+
+position: absolute;
+/*background-color: #0070f3;*/
+background-color: black;
+width: 90%;
+max-width: 900px;
+top:0;
+
+}

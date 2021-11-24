@@ -9,8 +9,16 @@
     /* background-color: #f1f1f1; */
     padding: 10px;
 }
-.card:hover{
-    cursor: pointer; 
+.card_title{
+    color: #0070f3;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    padding-bottom: 20px;
+
+}
+.card_title:hover{
+    text-decoration: underline;
 }
 .card img {
     width: 100%;

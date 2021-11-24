@@ -10,7 +10,7 @@ import useGetNews from "../../hooks/useGetNews";
 export default function Sports() {
 
    const router = useRouter();
-   const [news, loading, error] = useGetNews(null, router.query.q);
+   const [news, loading, error, totalResults] = useGetNews(router.query.q);
 
 
     return (
@@ -27,15 +27,13 @@ export default function Sports() {
                 (
 
                   <>
-
-<h2>The total number of results : {news.length + 1}</h2>
+                  <h2>Total Results from {router.query.q} : { totalResults }</h2>
 
                     <div className={styles.grid_cards}>
                     {news.map(
-                        (_new, i) =>
-                            i < 20 && (
-                                <CardNews key={_new.title} article={_new} />
-                            )
+                        (article, i) =>
+                          
+                                (<CardNews key={article.title} article={article} />)
                     )}
                 </div>
 
@@ -48,3 +46,5 @@ export default function Sports() {
         </div>
     );
 }
+
+// <h2>The total number of results : {news.length + 1}</h2>

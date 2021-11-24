@@ -5,14 +5,17 @@ import styles from "../../styles/Layout.module.css";
 import NavbarCategories from './NavbarCategories';
 
 const Footer = () => {
+     const date = new Date();
+
     return (
         <footer className={styles.footer}>
+        <hr />
             <div className={styles.logo}>
                 <h1>LT<span>News</span></h1>
             </div>
                 
                 <span className={styles.licence}>
-                     &copy Luis Tormes | Todos los derechos reservados
+                     © Luis Tormes - {date.getFullYear()} |  All rights reserved
                 </span>
         </footer>
     );

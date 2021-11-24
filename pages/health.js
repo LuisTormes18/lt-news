@@ -6,13 +6,13 @@ import Title from "./../components/ui/Title";
 import styles from "../styles/news.module.css";
 import useGetNews from "../hooks/useGetNews";
 
-export default function Healt() {
+export default function Health() {
 
-   const [news, loading, error] = useGetNews('healt');
+   const [news, loading, error] = useGetNews('health');
 
     return (
         <div>
-           <Title title='LTNews | Healt' />
+           <Title title='LTNews | Health' />
 
             <Layout>
             {
@@ -22,7 +22,7 @@ export default function Healt() {
                     <div className={styles.grid_cards}>
                     {news.map(
                         (_new, i) =>
-                            i < 20 && (
+                           (
                                 <CardNews key={_new.title} article={_new} />
                             )
                     )}

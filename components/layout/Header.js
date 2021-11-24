@@ -3,9 +3,11 @@ import { useRouter } from "next/router";
 
 import NavbarCategories from './NavbarCategories';
 import styles from "../../styles/Layout.module.css";
+import imgSearch from "../../public/q.png";
 
 const Header = () => {
     const router = useRouter();
+    console.log(router);
     const [search, setSearch] = useState('');
     const handleInputChange = ({target}) => {
 
@@ -17,11 +19,15 @@ const Header = () => {
 
         e.preventDefault();
 
+        if(search.trim() === ''){
 
+
+            return;
+        }
+
+        
         router.push(`/search/${search}`);
 
-
-        setSearch('');
     }
     return (
 
@@ -32,7 +38,7 @@ const Header = () => {
             </div>
             <form onSubmit={handleSubmit} className={styles.search_bar}>
                 <input type='text' value={search} onChange={handleInputChange} />
-                <button type='submit'>Q</button>
+                <button type='submit'></button>
             </form>
             </div>
 
