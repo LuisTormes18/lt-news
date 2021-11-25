@@ -7,7 +7,7 @@ const CardNews = ({ article }) => {
         <div className={styles.card}>
             <a href={article.url} target="_blank" className={styles.card_title}>{article.title} </a>
             <a href={article.url} target="_blank" rel="noreferrer">
-                <img src={article.urlToImage} alt='image' />
+               <Image src={article.url} alt="image"/>
             </a>
             <p>{article.description}</p>
 
