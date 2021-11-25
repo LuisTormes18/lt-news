@@ -5,8 +5,8 @@ import styles from "../../styles/news.module.css";
 const CardNews = ({ article }) => {
     return (
         <div className={styles.card}>
-            <a href={article.url} target="_blank" className={styles.card_title}>{article.title} </a>
-            <a href={article.url} target="_blank" rel="noreferrer">
+            <a href={article.url} target="_blank" rel="noopener noreferrer" className={styles.card_title}>{article.title} </a>
+            <a href={article.url} target="_blank" rel="noopener noreferrer">
                <Image src={article.url} alt="image"/>
             </a>
             <p>{article.description}</p>
