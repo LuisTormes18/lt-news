@@ -7,12 +7,9 @@ import imgSearch from "../../public/q.png";
 
 const Header = () => {
     const router = useRouter();
-    console.log(router);
     const [search, setSearch] = useState('');
     const handleInputChange = ({target}) => {
-
         setSearch(target.value);
-
     }
 
     const handleSubmit = (e) => {
@@ -24,7 +21,6 @@ const Header = () => {
 
             return;
         }
-
         
         router.push(`/search/${search}`);
 

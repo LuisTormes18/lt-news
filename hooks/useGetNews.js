@@ -12,9 +12,8 @@ const useGetNews = ( category='general' ) => {
      const from = `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`;
      const api_key = process.env.NEXT_PUBLIC_API_KEY_NEWSAPI;
  
-    const url = `https://newsapi.org/v2/everything?q=${category}&from=${from}&sortBy=popularity&apiKey=${api_key}`
+     const url = `https://newsapi.org/v2/everything?q=${category}&from=${from}&sortBy=popularity&apiKey=${api_key}`
     
-    console.log(url);
 
     useEffect(() => {
         setLoading(true);
@@ -25,11 +24,6 @@ const useGetNews = ( category='general' ) => {
                 const resp = await fetch(url);
                 const data = await resp.json();
                 
-                console.log(data);
-
-
-
-
                 if (data.status) {
                    setNews( {articles:data.articles, totalResults:data.totalResults} );
                 } else {
