@@ -7,13 +7,12 @@ const myLoader = ({ src, width, quality }) => {
 }
 
 const CardNews = ({ article }) => {
-console.log(article.urlToImage)
     return (
         <div className={styles.card}>
             <a href={article.url} target="_blank" rel="noopener noreferrer">
             <img src={article.urlToImage} alt="image" />
             </a>
-            <small>{article.source.name}</small>
+            <small>{article.source}</small>
             <a href={article.url} target="_blank" rel="noopener noreferrereact" className={styles.card_title}>{article.title} </a>
 
         </div>
