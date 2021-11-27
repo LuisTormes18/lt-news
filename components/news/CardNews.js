@@ -2,18 +2,25 @@ import Image from 'next/image';
 import React from "react";
 import styles from "../../styles/news.module.css";
 
+const myLoader = ({ src, width, quality }) => {
+  return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+}
+
 const CardNews = ({ article }) => {
+console.log(article.urlToImage)
     return (
         <div className={styles.card}>
-            <a href={article.url} target="_blank" rel="noopener noreferrer" className={styles.card_title}>{article.title} </a>
             <a href={article.url} target="_blank" rel="noopener noreferrer">
-               <Image src={article.url} alt="image"/>
+            <img src={article.urlToImage} alt="image" />
             </a>
-            <p>{article.description}</p>
+            <small>{article.source.name}</small>
+            <a href={article.url} target="_blank" rel="noopener noreferrereact" className={styles.card_title}>{article.title} </a>
 
         </div>
     );
 };
 export default CardNews;
 
+               // <Image loader={myLoader} width={300} height={300} src={article.urlToImage} alt="image"/>
+            // <p>{article.description}</p>
            

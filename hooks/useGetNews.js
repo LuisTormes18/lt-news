@@ -9,7 +9,7 @@ const useGetNews = ( category='general' ) => {
     });
 
      const date = new Date();
-     const from = `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`;
+     const from = `${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`;
      const api_key = process.env.NEXT_PUBLIC_API_KEY_NEWSAPI;
  
      const url = `https://newsapi.org/v2/everything?q=${category}&from=${from}&sortBy=popularity&apiKey=${api_key}`
@@ -17,14 +17,19 @@ const useGetNews = ( category='general' ) => {
 
     useEffect(() => {
         setLoading(true);
+
          async function getNews() {
+
+
             
             try {
 
                 const resp = await fetch(url);
                 const data = await resp.json();
+                    console.log(data)
                 
                 if (data.status) {
+                    console.log(data.articles);
                    setNews( {articles:data.articles, totalResults:data.totalResults} );
                 } else {
                     console.log(data.error);
@@ -36,9 +41,12 @@ const useGetNews = ( category='general' ) => {
             }   
             
             setLoading(false);
+            console.log('ya realiza la peticion');
+
      }
         getNews();
     }, [category]);
+
 
     return [news.articles, loading, error, news.totalResults];
 }
