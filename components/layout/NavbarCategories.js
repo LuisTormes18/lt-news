@@ -5,7 +5,9 @@ import NavbarItem from "../ui/NavbarItem";
 const NavbarCategories = () => {
    return (
         <nav className={ styles.navbar_categories_dark }>
-            <NavbarItem to='/' text='General' /> 
+
+            <Link href='/'><a>General</a></Link>
+
             <NavbarItem to='business' text='Business' /> 
             <NavbarItem to='entertainment' text='Entertainment' /> 
             <NavbarItem to='sports' text='Sports' /> 
