@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 
-import Layout from "./../../components/layout/Layout";
 import CardNews from "./../../components/news/CardNews";
 import Title from "../../components/ui/Title";
 import styles from "../../styles/news.module.css";
@@ -17,7 +16,6 @@ export default function Sports() {
         <div>
            <Title title={`You searched for ${router.query.q} | LTNews`} />
 
-            <Layout>
             {
                 loading ? (
                     <h3>Loading...</h3>
@@ -42,7 +40,6 @@ export default function Sports() {
                 ) 
             }
                 
-            </Layout>
         </div>
     );
 }

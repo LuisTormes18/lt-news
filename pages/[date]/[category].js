@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter} from 'next/router';
 
-import Layout from "../../components/layout/Layout";
 import CardNews from "../../components/news/CardNews";
 import Title from "./../../components/ui/Title";
 import styles from "../../styles/news.module.css";
@@ -45,7 +44,6 @@ const Category = () => {
         <div>
            <Title title={`LTNews | ${ query.category }`} />
 
-            <Layout>
             {
                 loading ? (<h3>Loading...</h3>) : 
 
@@ -61,7 +59,6 @@ const Category = () => {
                 ) 
             }
                 
-            </Layout>
         </div>
     );
 }
