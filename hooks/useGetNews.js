@@ -1,35 +1,32 @@
 import { useState, useEffect } from "react";
 
-const useGetNews = (category = "general") => {
+const useGetNews = (category = null) => {
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
     const [news, setNews] = useState([]);
+
+    let url = "http://localhost:3000/api/news";
+
+    if(!!category){
+        url += `/${category}`;
+    }  
+
+    console.log(url);
 
     useEffect(() => {
         setLoading(true);
 
         async function getNews() {
-            const key = process.env.NEXT_PUBLIC_API_KEY;
-            let newsMap = [];
+           
 
             try {
-                const res = await fetch(
-                    `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${key}`
-                );
-                const data = await res.json();
+                const result = await fetch(url);
+                const data = await result.json();
 
-                newsMap = data.response.docs.map((article) => {
-                    return {
-                        title: article.headline.main,
-                        description: article.abstract,
-                        url: article.web_url,
-                        urlToImage: `https://www.nytimes.com/${article.multimedia[0]?.url}`,
-                        source: article.source,
-                        date: article.pub_date,
-                        id: article._id,
-                    };
-                });
-                setNews(newsMap);
+                if(data.ok){
+                    setNews(data.news)
+                }
+
             } catch (err) {
                 setError(err);
                 console.log(err);

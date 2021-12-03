@@ -4,7 +4,7 @@ const NavbarItem = ({to, text}) => {
     return ( 
         <Link  href={{
               pathname: "/[category]",
-              query: { date: from, category: to },
+              query: { category: to },
             }}>
         <a>{text}</a> 
         </Link>)

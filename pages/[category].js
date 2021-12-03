@@ -1,29 +1,41 @@
-import Title from "../components/ui/Title";
+
+import Head from "next/head";
+import { useRouter } from 'next/router';
 
 import NewsContainer from "../components/news/NewsContainer";
+import { categories } from '../const/const';
+import useGetNews from '../hooks/useGetNews';
 
-const Category = ({ news }) => {
+const Category = () => {
+
+    const router = useRouter();
+    const { category } = router.query;
+
+
+    // evaluar si la catgorya es valida y si no lo es retornar un error 404
+
+    if(!categories.includes(category)){
+        return <h1>Error 404</h1>
+    }
+
+    const [news, loading] = useGetNews(category);
+
     return (
         <div>
-            {/* <Title title={`LTNews | ${query.category}`} /> */}
-            <NewsContainer news={news} />
+         <Head>
+                <title>LTNews | { category } </title>
+                <meta name="description" content="web site of news" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <h1 className='title-category'>{category}</h1>
+            {  
+                loading ? ( <h1>Loading...</h1> ) : (<NewsContainer news={news} />)
+             }
+            
+
         </div>
     );
 };
 
-Category.getInitialProps = async (props) => {
-    let news = [];
-    const result = await fetch(`http://localhost:3000/api/news/by_category?${props.query.category}`);
-    const data = await result.json();
-
-    data.ok && (news = data.news);
-
-    return {
-        props: {
-            news,
-        },
-        revalidate: 1,
-    };
-};
-
 export default Category;
+

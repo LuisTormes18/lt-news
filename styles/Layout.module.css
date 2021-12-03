@@ -27,7 +27,7 @@
     font-size: 30px;
 }
 .logo span {
-    color: #0070f3;
+    color: var(--primary);
     /* color: red; */
 }
 .search_bar input{

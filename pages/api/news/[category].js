@@ -1,13 +1,16 @@
-export default function (req, res) {
-    const { category } = req.params
+export default async function (req, res) {
+
+    const { category } = req.query;
+
     const key = process.env.NEXT_PUBLIC_API_KEY;
     let news = [];
 
     try {
         const res = await fetch(
-            `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${key}`
+            `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${category}&api-key=${key}`
         );
         const data = await res.json();
+
 
         news = data.response.docs.map((article) => {
             return {
@@ -20,6 +23,7 @@ export default function (req, res) {
                 id: article._id,
             };
         });
+
     } catch (err) {
         return res.json({ ok: false, err});
     }
@@ -30,4 +34,3 @@ export default function (req, res) {
     });
   }
   
-import { categories } from "../const/const";

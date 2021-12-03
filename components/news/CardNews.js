@@ -2,10 +2,6 @@ import Image from "next/image";
 import React from "react";
 import styles from "../../styles/news.module.css";
 
-const myLoader = ({ src, width, quality }) => {
-    return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
-};
-
 const CardNews = ({ article }) => {
     return (
         <article className={styles.card}>

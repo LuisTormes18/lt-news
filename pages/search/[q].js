@@ -1,34 +1,28 @@
-import { Head } from "next/head";
+import Head from "next/head";
+import { useRouter } from 'next/router';
 import NewsContainer from "../../components/news/NewsContainer";
+import useGetNews from '../../hooks/useGetNews';
 
-export default function Search({ news, search }) {
+export default function Search() {
+    const router = useRouter();
+    const { q } = router.query;
+
+
+
+    const [news, loading] = useGetNews(q);
+
     return (
         <>
             <Head>
-                <title>You searched for {search} | LTNews </title>
+                <title>You searched for {q} | LTNews </title>
                 <meta name="description" content="web site of news" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <NewsContainer news={news} />
+            <h1 className='title-category'>You searched for {q}</h1>
+             {  
+                loading ? ( <h1>Loading...</h1> ) : (<NewsContainer news={news} />)
+             }
         </>
     );
 }
-Search.getInitialProps = async (props) => {
-    let news = [];
-    const result = await fetch(
-        `http://localhost:3000/api/news/search?${props.query.q}`
-    );
-    const data = await result.json();
 
-    data.ok && (news = data.news);
-
-    return {
-        props: {
-            news,
-            search: props.query.q,
-        },
-        revalidate: 1,
-    };
-};
-
-// <h2>The total number of results : {news.length + 1}</h2>

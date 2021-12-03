@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+:root{
+	--primary:#0070f3;
+}
+.title-category{
+
+	color: var(--primary);
+}
+.title-category:first-letter {
+    text-transform: uppercase;
+}
