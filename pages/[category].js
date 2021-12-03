@@ -2,6 +2,7 @@
 import Head from "next/head";
 import { useRouter } from 'next/router';
 
+import Loading from "../components/ui/Loading";
 import NewsContainer from "../components/news/NewsContainer";
 import { categories } from '../const/const';
 import useGetNews from '../hooks/useGetNews';
@@ -29,7 +30,7 @@ const Category = () => {
             </Head>
             <h1 className='title-category'>{category}</h1>
             {  
-                loading ? ( <h1>Loading...</h1> ) : (<NewsContainer news={news} />)
+                loading ? ( <Loading /> ) : (<NewsContainer news={news} />)
              }
             
 

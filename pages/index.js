@@ -1,5 +1,6 @@
 import Head from "next/head";
 import NewsContainer from "./../components/news/NewsContainer";
+import Loading from "../components/ui/Loading";
 import useGetNews from '../hooks/useGetNews';
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             {  
-                loading ? ( <h1>Loading...</h1> ) : (<NewsContainer news={news} />)
+                loading ? ( < Loading /> ) : (<NewsContainer news={news} />)
              }
             
         </div>

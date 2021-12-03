@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useRouter } from 'next/router';
+import Loading from "../../components/ui/Loading";
 import NewsContainer from "../../components/news/NewsContainer";
 import useGetNews from '../../hooks/useGetNews';
 
@@ -20,7 +21,7 @@ export default function Search() {
             </Head>
             <h1 className='title-category'>You searched for {q}</h1>
              {  
-                loading ? ( <h1>Loading...</h1> ) : (<NewsContainer news={news} />)
+                loading ? ( <Loading /> ) : (<NewsContainer news={news} />)
              }
         </>
     );
