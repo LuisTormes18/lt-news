@@ -13,6 +13,7 @@ export default function Home() {
                 <meta name="description" content="web site of news" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
             {  
                 loading ? ( < Loading /> ) : (<NewsContainer news={news} />)
              }

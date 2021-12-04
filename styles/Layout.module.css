@@ -6,12 +6,12 @@
 }
 .container main{
     min-height: 100vh;
-    padding: 150px 10%;
+    padding: 20px 10%;
 }
 /* Header */
 .header{
-    position: fixed;
-    width: 100%; 
+   /* position: fixed;
+    width: 100%; */
 
     background-color: white;
 }

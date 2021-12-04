@@ -1,10 +1,10 @@
-import React from 'react'
+import styles from '../../styles/Loading.module.css';
 
 const Loading = () => {
 	return (
-		<div className='loading'>
-			<div className="loadingio-spinner-eclipse-6dl5c8zjabq">
-  				<div className="ldio-l2hzouclc5p">
+		<div className={styles.loading}>
+			<div className={styles.loading_spinner_eclipse}>
+  				<div className={styles.ldio}>
     				<div></div>
   				</div>
 			</div>
