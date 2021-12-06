@@ -8,8 +8,8 @@ const useGetNews = (category = null) => {
     const [loading, setLoading] = useState(false);
     const [news, setNews] = useState([]);
 
-    //let url = `http://localhost:3000/api/news`;
-     let url = `http://ltnews.netlify.app/api/news`;
+    let url = `http://localhost:3000/api/news`;
+    // let url = `http://ltnews.netlify.app/api/news`;
 
     if (!!category) {
         url += `/${category}`;
