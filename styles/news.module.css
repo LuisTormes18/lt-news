@@ -9,6 +9,12 @@
     /* background-color: #f1f1f1; */
     padding: 10px;
 }
+.image_container{
+    position: relative;
+    min-height: 350px;
+
+    background-color: #fdfdfd;
+}
 .card_title{
     color: #0070f3;
     font-weight: bold;
@@ -30,4 +36,6 @@
     /* border-bottom: 1px solid black; */
  
     cursor: default;
+
+
  }

@@ -5,9 +5,12 @@ import styles from "../../styles/news.module.css";
 const CardNews = ({ article }) => {
     return (
         <article className={styles.card}>
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-                <Image src={article.urlToImage} width={300} height={300}/>
+           <div className={styles.image_container}>
+             <a href={article.url} target="_blank" rel="noopener noreferrer">
+                <Image src={article.urlToImage} layout='fill'/>
             </a>
+           </div>
+
             <small>{article.source}</small>
             <a
                 href={article.url}
@@ -22,3 +25,4 @@ const CardNews = ({ article }) => {
 };
 export default CardNews;
 
+// width={300} height={300}
