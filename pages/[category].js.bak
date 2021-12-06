@@ -10,11 +10,11 @@ const Category = () => {
     const router = useRouter();
     const { category } = router.query;
 
-    const [news, loading] = useGetNews(category);
-	
     if (!categories.includes(category)) {
         return <h1>Error 404</h1>;
     }
+
+    const [news, loading] = useGetNews(category);
 
     return (
         <div>
