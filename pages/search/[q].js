@@ -1,14 +1,12 @@
 import Head from "next/head";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import Loading from "../../components/ui/Loading";
 import NewsContainer from "../../components/news/NewsContainer";
-import useGetNews from '../../hooks/useGetNews';
+import useGetNews from "../../hooks/useGetNews";
 
 export default function Search() {
     const router = useRouter();
     const { q } = router.query;
-
-
 
     const [news, loading] = useGetNews(q);
 
@@ -19,11 +17,8 @@ export default function Search() {
                 <meta name="description" content="web site of news" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <h1 className='title-category'>You searched for {q}</h1>
-             {  
-                loading ? ( <Loading /> ) : (<NewsContainer news={news} />)
-             }
+            <h1 className="title-category">You searched for {q}</h1>
+            {loading ? <Loading /> : <NewsContainer news={news} />}
         </>
     );
 }
-

@@ -20,7 +20,7 @@ export default async function (req, res) {
             };
         });
     } catch (err) {
-        return res.json({ ok: false, err});
+        return res.json({ ok: false, err });
     }
 
     res.json({
