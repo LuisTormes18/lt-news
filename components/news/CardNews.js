@@ -25,4 +25,3 @@ const CardNews = ({ article }) => {
 };
 export default CardNews;
 
-// width={300} height={300}

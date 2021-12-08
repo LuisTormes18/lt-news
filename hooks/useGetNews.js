@@ -5,7 +5,7 @@ const useGetNews = (category = null) => {
     const router = useRouter();
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [news, setNews] = useState([]);
+    const [news, setNews] = useState();
 
     const key = process.env.NEXT_PUBLIC_API_KEY;    
     let url = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${key}`
@@ -39,6 +39,8 @@ const useGetNews = (category = null) => {
                 const data = await result.json();
 
                 if (data.status === 'OK') {
+
+
                     setNews(mapData(data));
                 }
             } catch (err) {

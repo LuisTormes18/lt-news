@@ -20,6 +20,7 @@ a {
 .title-category{
 
 	color: var(--primary);
+  font-size: 1.8em;
 }
 .title-category:first-letter {
     text-transform: uppercase;

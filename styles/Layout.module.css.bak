@@ -24,8 +24,7 @@
 
 }
 .logo h1 {
-  font-size: 1.8em;
-    
+    font-size: 30px;
 }
 .logo span {
     color: var(--primary);
@@ -41,15 +40,11 @@
      transition: width 0.4s;
 }
 .search_bar input:focus{
+    width: 180px;
     border: none;
     outline: none;
     border-bottom: 1px solid black; 
 
-}
-@media(min-width: 450px){
-    .search_bar input:focus{
-        width: 150px;
-    }
 }
 .search_bar button{
     cursor: pointer;
@@ -95,21 +90,23 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /*background-color: rgba(200,200,200,.09);*/
 
     height: 200px;
     position: relative;
-
 }
 .licence{
     font-weight: bold;
 }
 .footer hr{
-height: 1px;
+
+height: 2px;
+
 position: absolute;
-background-color: #2c2c2c;
+/*background-color: #0070f3;*/
+background-color: black;
 width: 90%;
 max-width: 900px;
 top:0;
-border: none; 
 
 }

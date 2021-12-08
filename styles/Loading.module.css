@@ -1,8 +1,10 @@
 .loading{
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: baseline;
+
 }
 @keyframes ldio {
   0% { transform: rotate(0deg) }
@@ -12,20 +14,21 @@
 .ldio div {
   position: absolute;
   animation: ldio 1s linear infinite;
-  width: 160px;
-  height: 160px;
+  width: 60px;
+  height: 60px;
   top: 20px;
   left: 20px;
   border-radius: 50%;
   box-shadow: 0 4px 0 0 #0070f3;
-  transform-origin: 80px 82px;
+  /*transform-origin: 80px 82px;*/
 }
 .loading_spinner_eclipse {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
   overflow: hidden;
   background: #ffffff;
+  /*background-color: red;*/
 }
 .ldio{
   width: 100%;
@@ -34,5 +37,6 @@
   transform: translateZ(0) scale(1);
   backface-visibility: hidden;
   transform-origin: 0 0; /* see note above */
+
 }
 .ldio div { box-sizing: content-box; }
