@@ -1,8 +1,7 @@
 .container {
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
     height: auto;
-    
+    max-width: 1500px;
 }
 .container main{
     min-height: 100vh;
@@ -98,6 +97,8 @@
 
     height: 200px;
     position: relative;
+margin-top: 60px;
+
 
 }
 .licence{
