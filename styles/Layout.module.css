@@ -24,10 +24,14 @@
 }
 .logo h1 {
   font-size: 1.8em;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  letter-spacing: -2px;
     
 }
 .logo span {
     color: var(--primary);
+  letter-spacing: -2px;
+    
     /* color: red; */
 }
 .search_bar input{

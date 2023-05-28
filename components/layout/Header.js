@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
-import NavbarCategories from "./NavbarCategories";
 import styles from "../../styles/Layout.module.css";
-import imgSearch from "../../public/q.png";
+import NavbarCategories from "./NavbarCategories";
 
 const Header = () => {
   const router = useRouter();
